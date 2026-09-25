@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestor de tareas - Práctica Git</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Gestor de tareas</h1>
+    <p class="subtitulo">Proyecto base para la práctica colaborativa con Git y GitHub.</p>
+
+    <form id="task-form" class="panel">
+      <label for="task-input">Nueva tarea</label>
+      <div class="fila">
+        <input id="task-input" type="text" placeholder="Ej.: Revisar Pull Request" autocomplete="off">
+        <button type="submit">Añadir</button>
+      </div>
+    </form>
+
+    <section class="panel">
+      <label for="filter">Mostrar</label>
+      <select id="filter">
+        <option value="all">Todas</option>
+        <option value="pending">Pendientes</option>
+        <option value="completed">Completadas</option>
+      </select>
+    </section>
+
+    <section class="panel">
+      <h2>Tareas</h2>
+      <ul id="task-list" class="lista-tareas"></ul>
+    </section>
+
+    <p id="status" class="estado">Las funciones de añadir, eliminar, completar y filtrar se implementarán en ramas separadas.</p>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
