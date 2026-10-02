@@ -1,9 +1,18 @@
-import { deleteTarea } from "../store.js";
-
 export function activarEliminar(render) {
-  // TODO feature/eliminar-tarea
-  // 1. Escuchar clics en #task-list usando delegación de eventos.
-  // 2. Comprobar que el botón tenga data-action="delete".
-  // 3. Obtener el id numérico del <li data-id="...">.
-  // 4. Llamar a deleteTarea(id) y después a render().
+    const taskList = document.querySelector('#task-list');
+    if (!taskList) return;
+
+    taskList.addEventListener('click', (event) => {
+        const deleteButton = event.target.closest('[data-action="delete"]');
+        if (!deleteButton) return;
+
+        const li = deleteButton.closest('li');
+        if (!li) return;
+
+        const id = Number(li.dataset.id || li.id);
+        if (isNaN(id)) return;
+
+        deleteTarea(id);
+        render();
+    });
 }
