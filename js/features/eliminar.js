@@ -1,6 +1,7 @@
 /**
  * @file eliminar.js
  * @description Módulo encargado de gestionar la funcionalidad de eliminar tareas en el gestor.
+ Estos comentarios nos sirven de explicacion para el codigo.
  */
 
 /**
