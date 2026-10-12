@@ -10,7 +10,7 @@
 
 **Pull Request + revisión.** Antes de integrar mi rama en `develop` abrí un Pull Request (#2) con título y descripción de lo que había hecho y cómo lo probé. Lo revisó **[nombre del revisor]** en GitHub, de modo que el cambio dejó de ser algo privado de mi ordenador y pasó a ser visible y discutible. Si se pedía una corrección, bastaba con hacer otro commit en la misma rama y el Pull Request se actualizaba solo.
 
-**Resolver un conflicto en equipo.** Todos modificamos la misma línea del `README.md`, así que al hacer `git merge origin/develop` en mi rama Git marcó el conflicto y no pudo decidir por sí mismo. Identificamos el fichero, acordamos entre todos una frase final, borramos los marcadores (`<<<<<<<`, `=======`, `>>>>>>>`) y cerramos el merge con un commit. La frase que quedó es **"Proyecto actualizado con éxito"**, más descriptiva para el grupo que las cuatro frases originales. Esto demuestra que colaborar no es solo repartirse tareas: cuando dos trabajos tocan lo mismo hay que comunicarse y decidir juntos.
+**Resolver un conflicto en equipo.** Todos modificamos la misma línea del `README.md` en nuestras ramas (en la mía, en el commit `0c147c7`). El conflicto saltó al integrar `feature/anadir-tarea` y se resolvió en esa rama (commit `6c1fa82`, "Resuelto conflicto en README"): Git no pudo decidir por sí mismo, así que hubo que identificar el fichero, acordar entre todos una frase final, borrar los marcadores (`<<<<<<<`, `=======`, `>>>>>>>`) y cerrar el merge con un commit. La frase que quedó es **"Proyecto actualizado con éxito"**, más descriptiva para el grupo que las cuatro frases originales. Esto demuestra que colaborar no es solo repartirse tareas: cuando dos trabajos tocan lo mismo hay que comunicarse y decidir juntos.
 
 **Relación con la cultura DevOps.** Git y GitHub no son DevOps por sí solos, pero este flujo (ramas, revisión, integración frecuente) aplica sus ideas: trabajo colaborativo, cambios pequeños y trazables, y reproducibilidad.
 
@@ -71,11 +71,11 @@ Justificación: Jenkins puede instalarlo y administrarlo la propia empresa en su
 
 Lo que más me ha quedado claro de la práctica es que el valor de Git y GitHub está en el proceso (ramas, revisión, conflictos resueltos entre todos) y no tanto en el código. También veo que muchas de las comprobaciones que hicimos a mano serían buenas candidatas para automatizar en un futuro pipeline de CI/CD.
 
-Mi aportación concreta fue la rama `feature/eliminar-tarea`, en la que hice **4 commits** (algunos salen con mi otra cuenta de GitHub, `daw209`, y el último con `iker520`):
+Mi aportación concreta fue la rama `feature/eliminar-tarea`, en la que hice **4 commits** (algunos salen con mi usuario, `daw209`, y el último con `iker520`):
 
 1. `7a60dff` - Implementar función `activarEliminar2`: primera versión de la función que elimina tareas.
 2. `7d6e100` - `feat(eliminar)`: implementación y mejor documentación de `activarEliminar`.
-3. `0c147c7` - Actualizado el estado del proyecto en el `README.md` (el cambio que provocó el conflicto) y algun cambio en el js.
+3. `0c147c7` - Actualizado el estado del proyecto en el `README.md` (la línea del README que modificamos todos) y algun cambio en el js.
 4. `2a582a7` - Update `eliminar.js` añadiendo comentarios.
 
- Abrí el Pull Request #2 hacia `develop`, que revisó **Carlos/KingFei7**. Además, el conflicto del `README.md` apareció en mi rama al hacer el merge con `develop`; lo resolvimos entre todos dejando la frase "Proyecto actualizado con éxito", y completé el merge con su commit correspondiente.
+ Abrí el Pull Request #2 hacia `develop`, que revisó **Carlos/KingFei7**. Respecto al conflicto del `README.md`, yo modifiqué esa línea en mi rama (`0c147c7`), pero el conflicto apareció y se resolvió en `feature/anadir-tarea`, dejando entre todos la frase "Proyecto actualizado con éxito".
