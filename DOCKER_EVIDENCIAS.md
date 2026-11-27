@@ -136,4 +136,6 @@ Docker Compose crea automáticamente una red para el proyecto con un DNS interno
 
 ## 7. Colaboración
 
-**Enlaces a Pull Requests relevantes:** TODO
+**Enlaces a Pull Requests relevantes:** 
+
+- Integración de Docker y Docker Compose (`feature/docker` → `develop`): https://github.com/KingFei7/gestor-tareas-cibra/pull/15
