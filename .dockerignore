@@ -1,0 +1,14 @@
+.git
+.github
+evidencias/
+README.md
+README_DOCKER.md
+DOCKER_EVIDENCIAS.md
+LEEME_PRIMERO.md
+Dockerfile
+.dockerignore
+compose.yaml
+proxy/
+demo_opcional/
+node_modules/
+*.zip
